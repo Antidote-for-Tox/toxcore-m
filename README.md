@@ -1,3 +1,8 @@
+The purpose of this clone is to make Xcode happy by providing .m files instead of .c ones.
+The only patch done is renaming *.c files to *.m.
+
+# Original README
+
 ![Project Tox](https://raw.github.com/irungentoo/toxcore/master/other/tox.png "Project Tox")
 ***
 
