@@ -1,0 +1,75 @@
+diff --git a/README.md b/README.md
+index 4d08dcd..c060f96 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,5 @@
++The purpose of this clone is to make Xcode happy by providing .m files instead of .c and change some includes.
++
+ ![Project Tox](https://raw.github.com/irungentoo/toxcore/master/other/tox.png "Project Tox")
+ ***
+
+diff --git a/other/fun/sign.c b/other/fun/sign.c
+index 56a9d1e..1eab693 100644
+--- a/other/fun/sign.c
++++ b/other/fun/sign.c
+@@ -15,7 +15,7 @@
+  *
+  * NOTE: The signature is appended to the end of the file.
+  */
+-#include <sodium.h>
++#include "sodium.h"
+ #include <string.h>
+ #include "../../testing/misc_tools.c" // hex_string_to_bin
+ 
+diff --git a/other/fun/strkey.c b/other/fun/strkey.c
+index 7e5a1e1..cfc218f 100644
+--- a/other/fun/strkey.c
++++ b/other/fun/strkey.c
+@@ -39,7 +39,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ 
+-#include <sodium.h>
++#include "sodium.h"
+ 
+ #define PRINT_TRIES_COUNT
+ 
+diff --git a/toxav/group.h b/toxav/group.h
+index 3355a44..ea18a15 100644
+--- a/toxav/group.h
++++ b/toxav/group.h
+@@ -19,7 +19,7 @@
+  */
+ 
+ /* Audio encoding/decoding */
+-#include <opus.h>
++#include "opus.h"
+ 
+ #include "../toxcore/group.h"
+ 
+diff --git a/toxcore/crypto_core.h b/toxcore/crypto_core.h
+index eefb1d9..9147d00 100644
+--- a/toxcore/crypto_core.h
++++ b/toxcore/crypto_core.h
+@@ -27,7 +27,7 @@
+ 
+ #ifndef VANILLA_NACL
+ /* We use libsodium by default. */
+-#include <sodium.h>
++#include "sodium.h"
+ #else
+ #include <crypto_box.h>
+ #include <randombytes.h>
+diff --git a/toxcore/network.m b/toxcore/network.m
+index 22ee420..d0d8c6e 100644
+--- a/toxcore/network.m
++++ b/toxcore/network.m
+@@ -437,7 +437,7 @@ void networking_poll(Networking_Core *net)
+ 
+ #ifndef VANILLA_NACL
+ /* Used for sodium_init() */
+-#include <sodium.h>
++#include "sodium.h"
+ #endif
+ 
+ uint8_t at_startup_ran = 0;
