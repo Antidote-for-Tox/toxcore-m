@@ -34,6 +34,19 @@ index 7e5a1e1..cfc218f 100644
  
  #define PRINT_TRIES_COUNT
  
+diff --git a/toxav/audio.h b/toxav/audio.h
+index b1db744..7b2af93 100644
+--- a/toxav/audio.h
++++ b/toxav/audio.h
+@@ -22,7 +22,7 @@
+ #ifndef AUDIO_H
+ #define AUDIO_H
+ 
+-#include <opus.h>
++#include "opus.h"
+ #include <pthread.h>
+ 
+ #include "toxav.h"
 diff --git a/toxav/group.h b/toxav/group.h
 index 3355a44..ea18a15 100644
 --- a/toxav/group.h
