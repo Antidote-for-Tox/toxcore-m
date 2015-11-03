@@ -39,7 +39,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <sodium.h>
+#include "sodium.h"
 
 #define PRINT_TRIES_COUNT
 

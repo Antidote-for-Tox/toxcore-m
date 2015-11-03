@@ -15,7 +15,7 @@
  *
  * NOTE: The signature is appended to the end of the file.
  */
-#include <sodium.h>
+#include "sodium.h"
 #include <string.h>
 #include "../../testing/misc_tools.c" // hex_string_to_bin
 
