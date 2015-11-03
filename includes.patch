@@ -34,19 +34,6 @@ index 7e5a1e1..cfc218f 100644
  
  #define PRINT_TRIES_COUNT
  
-diff --git a/toxav/codec.h b/toxav/codec.h
-index 6018e5d..b412b2b 100644
---- a/toxav/codec.h
-+++ b/toxav/codec.h
-@@ -40,7 +40,7 @@
- #define VIDEO_CODEC_ENCODER_INTERFACE (vpx_codec_vp8_cx())
- 
- /* Audio encoding/decoding */
--#include <opus.h>
-+#include "opus.h"
- 
- #define PAIR(TYPE1__, TYPE2__) struct { TYPE1__ first; TYPE2__ second; }
- 
 diff --git a/toxav/group.h b/toxav/group.h
 index 3355a44..ea18a15 100644
 --- a/toxav/group.h
